@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-// import Button from './Button';
 
 const Modal = ({ active, setActive, newTerm }) => {
   const [changeHandlerTerm, setChangeHandlerTerm] = useState('');

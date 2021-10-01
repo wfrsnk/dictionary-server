@@ -17,16 +17,12 @@ class App extends React.Component {
   }
 
   addTerm = (ID,termTitle, descriptionText) => {
-
     const newTerm = {
         id: ID,
         term: termTitle,
         description: descriptionText,
       };  
-    this.setState({terms: this.state.terms.concat(newTerm) }); 
-
-  
-    
+    this.setState({terms: this.state.terms.concat(newTerm) });  
   }
 
   setModalActive = (value) =>{
