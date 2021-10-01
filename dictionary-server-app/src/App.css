@@ -5,7 +5,6 @@ body{
 .container {
   
   box-sizing: border-box;
-  min-height: 20vh;
   background-color: rgb(204, 204, 204);
   margin: 2% 10% 0 10%;
   border-radius: 10px;
@@ -83,4 +82,9 @@ justify-content: center;
 
 .input.description {
   height: 100px;
+}
+hr{
+  margin-top: 0;
+  opacity: 50%;
+  z-index: -1;
 }
