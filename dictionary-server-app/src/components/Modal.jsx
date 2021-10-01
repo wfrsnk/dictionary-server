@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 // import Button from './Button';
 
 const Modal = ({ active, setActive, newTerm }) => {
@@ -44,7 +45,7 @@ const Modal = ({ active, setActive, newTerm }) => {
                   changeHandlerTerm !== '' && changeHandlerDescription !== ''
                     ? function (event) {
                         setActive(false);
-                        newTerm(changeHandlerTerm, changeHandlerDescription);
+                        newTerm(uuidv4(), changeHandlerTerm, changeHandlerDescription);
                         clearInputs();
                       }
                     : () => setActive(false)

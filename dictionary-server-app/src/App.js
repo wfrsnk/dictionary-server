@@ -16,9 +16,10 @@ class App extends React.Component {
     }
   }
 
-  addTerm = (termTitle, descriptionText) => {
+  addTerm = (ID,termTitle, descriptionText) => {
 
     const newTerm = {
+        id: ID,
         term: termTitle,
         description: descriptionText,
       };  
@@ -43,7 +44,7 @@ class App extends React.Component {
       </Button>
       <Modal active = {this.state.active} setActive = {this.setModalActive} newTerm = {this.addTerm}> 
       </Modal>
-      { terms.map(element => (<Term term = {element.term} description = {element.description} ></Term>))}
+      { terms.map(element => (<Term key = {element.id} term = {element.term} description = {element.description} ></Term>))}
       
 
     </div>);
