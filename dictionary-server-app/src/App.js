@@ -30,7 +30,8 @@ class App extends React.Component {
   }
  
   render(){
-    const terms = this.state.terms
+    const terms = this.state.terms;
+    terms.reverse();
     console.log('terms: ', terms);
 
     return(  <div>
