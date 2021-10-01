@@ -60,7 +60,7 @@ justify-content: center;
   background-color: rgb(204, 204, 204);
   border-radius: 10px;
   transform: scale(0.5);
-  transition: 0.5s all;
+  transition: 0.5s ;
   width: 50vw;
   display: flex;
   justify-content: center;
@@ -83,8 +83,11 @@ justify-content: center;
 .input.description {
   height: 100px;
 }
-hr{
-  margin-top: 0;
-  opacity: 50%;
-  z-index: -1;
+
+.formContainer {
+  position: relative;
+  display: flexbox;
+  justify-content: center;
+
 }
+

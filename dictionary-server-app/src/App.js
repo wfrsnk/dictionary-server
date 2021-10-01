@@ -11,17 +11,20 @@ class App extends React.Component {
     super();
     this.state = {
       terms: [],
-      active: false
+      active: false,
+
     }
   }
 
-  addTerm = (term, description) => {
+  addTerm = (termTitle, descriptionText) => {
 
     const newTerm = {
-        term: term,
-        description: description,
+        term: termTitle,
+        description: descriptionText,
       };  
     this.setState({terms: this.state.terms.concat(newTerm) }); 
+
+  
     
   }
 
@@ -30,8 +33,8 @@ class App extends React.Component {
   }
  
   render(){
-    const terms =  this.state.terms
-    console.log('terms: ', terms);
+  console.log(this.state.terms);
+  console.log(this.state.active);
 
     return(  <div>
       <Header />
@@ -41,31 +44,13 @@ class App extends React.Component {
       <Modal active = {this.state.active} setActive = {this.setModalActive} newTerm = {this.addTerm}> 
       </Modal>
       <hr width = "50%"/>
-
+    
       <Term></Term>
      
 
     </div>);
   }
  
-// const App = () => {
-
-//   const [modalActive, setModalActive] = useState(false)
-
-//   return (
-    // <div>
-    //   <Header />
-    //   <Button dopClass = '' value = {true} setActive = {setModalActive}>
-    //     Добавить
-    //   </Button>
-    //   <Modal active = {modalActive} setActive = {setModalActive}> 
-    //     <Button dopClass = 'save' value = {false} setActive = {setModalActive}>
-    //        Сохранить
-    //     </Button>
-    //   </Modal>
-    //   <hr width = "50%"/>
-    // </div>
-//   );
 }
 
 export default App;
