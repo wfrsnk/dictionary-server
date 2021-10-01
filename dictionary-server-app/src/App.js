@@ -33,8 +33,8 @@ class App extends React.Component {
   }
  
   render(){
-  console.log(this.state.terms);
-  console.log(this.state.active);
+    const terms = this.state.terms
+    console.log('terms: ', terms);
 
     return(  <div>
       <Header />
@@ -43,10 +43,8 @@ class App extends React.Component {
       </Button>
       <Modal active = {this.state.active} setActive = {this.setModalActive} newTerm = {this.addTerm}> 
       </Modal>
-      <hr width = "50%"/>
-    
-      <Term></Term>
-     
+      { terms.map(element => (<Term term = {element.term} description = {element.description} ></Term>))}
+      
 
     </div>);
   }
