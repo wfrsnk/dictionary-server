@@ -12,7 +12,7 @@ const Modal = ({ active, setActive, newTerm }) => {
   const getInputDescription = (event) => {
     setChangeHandlerDescription(event.target.value);
   };
-
+  //очистка инпутов
   const clearInputs = () => {
     setChangeHandlerTerm('');
     setChangeHandlerDescription('');
