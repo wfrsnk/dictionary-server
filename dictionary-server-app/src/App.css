@@ -1,9 +1,13 @@
 body{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   background-color: rgb(44, 55, 61);
   color:rgb(44, 55, 61);
 }
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 200;
+}
 .container {
-  
   box-sizing: border-box;
   background-color: rgb(204, 204, 204);
   margin: 0% 10% 2% 10%;
@@ -25,7 +29,6 @@ justify-content: center;
 
 .button{
   font-size: 16px;
-  opacity: 50%;
   border: none;
   border-radius: 10px;
   background-color: rgb(204, 204, 204);
@@ -37,9 +40,7 @@ justify-content: center;
   background-color: rgb(44, 55, 61);
   color:rgb(204, 204, 204);
 }
-.button:hover {
- opacity: 100%;
-}
+
 
 .modal{
   height: 100vh;

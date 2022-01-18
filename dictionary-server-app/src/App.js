@@ -12,8 +12,13 @@ class App extends React.Component {
     this.state = {
       terms: [],
       active: false,
-
     }
+  }
+
+  componentDidMount() {
+    fetch('/api/terms').then(res => res.json()).then(data => {
+      this.setState({terms: this.state.terms.concat(data) });
+    })
   }
 
   addTerm = (ID,termTitle, descriptionText) => {
@@ -22,7 +27,8 @@ class App extends React.Component {
         term: termTitle,
         description: descriptionText,
       };  
-    this.setState({terms: this.state.terms.concat(newTerm) });  
+    this.setState({terms: this.state.terms.concat(newTerm) });
+     
   }
 
   setModalActive = (value) =>{
@@ -31,8 +37,6 @@ class App extends React.Component {
  
   render(){
     const terms = this.state.terms;
-    terms.reverse();
-    console.log('terms: ', terms);
 
     return(  <div>
       <Header />
